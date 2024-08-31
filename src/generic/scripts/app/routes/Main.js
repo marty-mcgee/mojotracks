@@ -39,11 +39,11 @@ export default class Main extends Component {
         const { params, presets } = this.props
         const shareID = params.shareID
 
-        handleGoogleAPI()
-            .fork(logError, () => {
-                if (shareID) this.setupSharedItemsAndUpdate(shareID)
-                this.setState({ googleAPIHasLoaded: true })
-            })
+        // handleGoogleAPI()
+        //     .fork(logError, () => {
+        //         if (shareID) this.setupSharedItemsAndUpdate(shareID)
+        //         this.setState({ googleAPIHasLoaded: true })
+        //     })
 
         if (!shareID) {
             const presetID = this.props.params.presetID || this.props.activePresetID
