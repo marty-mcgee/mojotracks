@@ -1,7 +1,7 @@
 <!-- MojoTracks -->
 
-# MojoTracks[-||-](https://github.com/marty-mcgee/octogonio?branch=master)
-[mojotracks.com](https://mojotracks.com)
+# MojoTracks [-||-](https://github.com/marty-mcgee/octogonio?branch=master)
+## [mojotracks.com](https://mojotracks.com)
 
 ```yarn install```
 ```yarn build```
@@ -14,3 +14,4 @@
 -- State Management using Redux. CSS using SASS + PostCSS.
 -- Integrated Google URL Shortener API to allow sharing of Redux state. 
 -- Sass/PostCSS used for styling.
+
