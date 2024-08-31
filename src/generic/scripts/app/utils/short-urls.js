@@ -46,7 +46,7 @@ const getLongURLFromShareID = shareID =>
         if (!window.gapi) return rej(Error(`Google URL Shortener API Failed: ${shareID}`))
         return window.gapi.client.urlshortener.url
             .get({
-              shortUrl: `http://goo.gl/${shareID}`
+                shortUrl: `http://goo.gl/${shareID}`
             })
             .then(response => res(response.result.longUrl), logError)
     })
@@ -60,8 +60,8 @@ const getPresetFromData = base64Data =>
             if (!base64Data) rej(Error('No base64 data given'))
 
             const decompressedData = base64Data
-                                  && base64Data.length % 4 === 0
-                                  && decompress(base64Data, { inputEncoding: 'Base64' })
+                && base64Data.length % 4 === 0
+                && decompress(base64Data, { inputEncoding: 'Base64' })
 
             const preset = /[A-Za-z0-9+/=]/.test(decompressedData) ? JSON.parse(decompressedData) : undefined
             res(preset)
