@@ -7,7 +7,7 @@ plugins/*
 www/*
 build/*
 dist/*
-public/*
+# public/*
 !dist/.gitkeep
 
 .DS_Store
