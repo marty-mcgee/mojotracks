@@ -1,0 +1,13 @@
+/.sass-cache/
+/node_modules/
+
+coverage/*
+platforms/*
+plugins/*
+www/*
+build/*
+dist/*
+public/*
+!dist/.gitkeep
+
+.DS_Store
