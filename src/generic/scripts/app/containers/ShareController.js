@@ -9,7 +9,7 @@ import IconButton from 'components/IconButton'
 import * as Tracking from 'modules/tracking'
 import { createPreset } from 'utils/presets'
 import { logError } from 'utils/tools'
-import { getGoogleShortURL } from 'utils/short-urls'
+// import { getGoogleShortURL } from 'utils/short-urls'
 
 const getIDFromGoogleURL = compose(last, split('/'))
 
@@ -61,7 +61,7 @@ class ShareController extends Component {
         List(this.props.audioPlaylist)
             .traverse(Task.of, getShortURL)
             .map(combineShortURLs)
-            .chain(compressShortMultiURL)
+            // .chain(compressShortMultiURL)
             .fork(logError, (url) => {
                 this.launchModal(url)
                 this.setState({ isLoading: false })

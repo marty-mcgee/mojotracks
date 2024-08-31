@@ -15,7 +15,7 @@ import { defaultAllowedLengths } from 'reducers/sequences.initial-state'
 
 import { backwardsCompatibility } from 'utils/presets'
 import { getActiveSoundsFromHitTypes } from 'utils/instruments'
-import { getLongURLFromShareID, getPresetFromData, handleGoogleAPI } from 'utils/short-urls'
+// import { getLongURLFromShareID, getPresetFromData, handleGoogleAPI } from 'utils/short-urls'
 
 import {
     presetToPlaylistItem,
@@ -92,38 +92,38 @@ export default class Main extends Component {
         window.removeEventListener('popstate', this.backToHome)
     }
 
-    // setupSharedItems :: shareID -> Task Error audioPlaylist
-    setupSharedItems = shareID =>
-        List(shareID.split('-'))
-            .traverse(Task.of, getLongURLFromShareID)
-            .chain(this.updatePresetAndGetPlaylist)
+    // // setupSharedItems :: shareID -> Task Error audioPlaylist
+    // setupSharedItems = shareID =>
+    //     List(shareID.split('-'))
+    //         .traverse(Task.of, getLongURLFromShareID)
+    //         .chain(this.updatePresetAndGetPlaylist)
 
-    // updatePresetAndGetPlaylist :: List longURLs -> Task Error audioPlaylist
-    updatePresetAndGetPlaylist = (longURLs) => {
-        if (longURLs.size === 1 && longURLs.get(0).includes('-')) {
-            return compose(this.setupSharedItems, last, split('/'))(longURLs.get(0))
-        }
+    // // updatePresetAndGetPlaylist :: List longURLs -> Task Error audioPlaylist
+    // updatePresetAndGetPlaylist = (longURLs) => {
+    //     if (longURLs.size === 1 && longURLs.get(0).includes('-')) {
+    //         return compose(this.setupSharedItems, last, split('/'))(longURLs.get(0))
+    //     }
 
-        const sharedPresets = longURLs
-            .traverse(Task.of, this.urlToPreset)
+    //     const sharedPresets = longURLs
+    //         .traverse(Task.of, this.urlToPreset)
 
-        sharedPresets
-            .fork(logError, (_sharedPresets) => {
-                this.props.actions.applyPreset(_sharedPresets.get(0))
-            })
+    //     sharedPresets
+    //         .fork(logError, (_sharedPresets) => {
+    //             this.props.actions.applyPreset(_sharedPresets.get(0))
+    //         })
 
-        return sharedPresets
-            .chain(traverse(Task.of, presetToPlaylistItem))
-            .map(map(assoc('isLocked', true)))
-    }
+    //     return sharedPresets
+    //         .chain(traverse(Task.of, presetToPlaylistItem))
+    //         .map(map(assoc('isLocked', true)))
+    // }
 
-    setupSharedItemsAndUpdate = (shareID) => {
-        this.setupSharedItems(shareID)
-            .fork(logError, (audioPlaylist) => {
-                this.props.actions.updateAudioPlaylist(audioPlaylist.toJS())
-                this.props.actions.disableModal()
-            })
-    }
+    // setupSharedItemsAndUpdate = (shareID) => {
+    //     this.setupSharedItems(shareID)
+    //         .fork(logError, (audioPlaylist) => {
+    //             this.props.actions.updateAudioPlaylist(audioPlaylist.toJS())
+    //             this.props.actions.disableModal()
+    //         })
+    // }
 
     // urlToPreset :: url -> Task Error Preset
     urlToPreset = dataString => compose(
