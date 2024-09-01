@@ -4,10 +4,10 @@
 coverage/*
 platforms/*
 plugins/*
-www/*
+# www/*
+public/*
 build/*
 dist/*
-# public/*
 !dist/.gitkeep
 
 .DS_Store

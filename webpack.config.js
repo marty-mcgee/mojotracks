@@ -11,7 +11,7 @@ const nodeEnv = 'development' // process.env.NODE_ENV
 const isProduction = nodeEnv === 'production'
 
 const sourceDir = '/src'
-const buildDir = '/www'
+const buildDir = 'public' // '/www'
 const entryJSFile = `${sourceDir}/generic/scripts/app.js`
 const outputJSFile = '[name].[chunkhash].js'
 const outputJSFileDev = '[name].js'
