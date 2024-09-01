@@ -6,11 +6,11 @@ const getDescription = sequence => sequence.description ? unescape(sequence.desc
 export default class Sequences extends Component {
     sequences = []
 
-    componentWillMount = () => {
+    UNSAFE_componentWillMount = () => {
         this.assignSequences(this.props.sequences)
     }
 
-    componentWillUpdate = (nextProps) => {
+    UNSAFE_componentWillUpdate = (nextProps) => {
         this.assignSequences(nextProps.sequences)
     }
 

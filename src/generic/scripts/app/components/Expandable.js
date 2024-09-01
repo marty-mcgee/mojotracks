@@ -58,7 +58,7 @@ class Expandable extends Component {
         }
     }
 
-    componentWillUpdate = (nextProps) => {
+    UNSAFE_componentWillUpdate = (nextProps) => {
         const propsHaveChanged = nextProps.isExpanded !== this.props.isExpanded
         const propsAreDifferent = nextProps.isExpanded !== this.state.isExpanded
         if (propsHaveChanged

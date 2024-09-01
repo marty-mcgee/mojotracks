@@ -34,7 +34,7 @@ export default class Main extends Component {
         childrenLoaded: false,
     }
 
-    componentWillMount = () => {
+    UNSAFE_componentWillMount = () => {
         this.setupBackButtonController()
         const { params, presets } = this.props
         const shareID = params.shareID
@@ -82,7 +82,7 @@ export default class Main extends Component {
         }, 'additional-views')
     }
 
-    componentWillUpdate = (nextProps) => {
+    UNSAFE_componentWillUpdate = (nextProps) => {
         if (!this.props.params.shareID && nextProps.params.shareID) {
             this.setupSharedItemsAndUpdate(nextProps.params.shareID)
         }

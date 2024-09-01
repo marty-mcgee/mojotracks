@@ -90,7 +90,7 @@ export default class Waveform extends Component {
         this.loop()
     }
 
-    componentWillUpdate = (nextProps) => {
+    UNSAFE_componentWillUpdate = (nextProps) => {
         if (this.props.width !== nextProps.width || !this.levels.length) {
             this.initialise(nextProps)
         }

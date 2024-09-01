@@ -37,7 +37,7 @@ class SoundController extends Component {
     this.clearTimeouts()
   }
 
-  componentWillUpdate = (nextProps) => {
+  UNSAFE_componentWillUpdate = (nextProps) => {
     if (this.props.isPlaying && !nextProps.isPlaying) {
       return this.stopEvent(false)
     }

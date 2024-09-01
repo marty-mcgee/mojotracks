@@ -14,7 +14,7 @@ class Visualiser extends Component {
         isRenderingBuffer: false,
     }
 
-    componentWillMount = () => {
+    UNSAFE_componentWillMount = () => {
         if (this.props.currentPlaylistItem) {
             const props = this.props
             this.updateBuffer(props.audioStartTime, props.currentPlaylistItem, props.sequences, props.bpm)
@@ -25,7 +25,7 @@ class Visualiser extends Component {
         this.setContainerWidth()
     }
 
-    componentWillUpdate = (nextProps) => {
+    UNSAFE_componentWillUpdate = (nextProps) => {
         if (!nextProps.currentPlaylistItem && !this.state.isEmpty) {
             this.setState({ isEmpty: true })
         }

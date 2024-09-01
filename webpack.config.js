@@ -196,6 +196,10 @@ const config = (env) => {
     },
     plugins: [
       
+      new webpack.ProvidePlugin({
+          Buffer: ['buffer', 'Buffer'],
+      }),
+
       new CopyWebpackPlugin([
         { from: 'src/generic/static/config.xml' },
         { from: 'src/generic/static/manifest.json' },

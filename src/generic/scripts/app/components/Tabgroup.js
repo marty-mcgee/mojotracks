@@ -6,7 +6,7 @@ class Tabgroup extends Component {
     }
     tabs = []
 
-    componentWillMount = () => {
+    UNSAFE_componentWillMount = () => {
         const children = Array.isArray(this.props.children) ? this.props.children : [this.props.children]
         this.setActiveTab(children)
     }

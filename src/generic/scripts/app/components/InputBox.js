@@ -12,7 +12,7 @@ class InputBox extends Component {
     this.errorCheck(this.props.defaultValue)
   }
 
-  componentWillUpdate = (nextProps) => {
+  UNSAFE_componentWillUpdate = (nextProps) => {
     if (!this.isFocused) this.updateValue(nextProps.defaultValue)
   }
 

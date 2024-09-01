@@ -29,7 +29,7 @@ class SwipeableViews extends Component {
     containerEl
     rootEl
 
-    componentWillMount = () => {
+    UNSAFE_componentWillMount = () => {
         this.currentIndex = this.props.index
     }
 
@@ -38,7 +38,7 @@ class SwipeableViews extends Component {
         this.rootEl = findDOMNode(this)
     }
 
-    componentWillUpdate = (nextProps) => {
+    UNSAFE_componentWillUpdate = (nextProps) => {
         if (this.currentIndex !== nextProps.index) {
             this.currentIndex = nextProps.index
         }
