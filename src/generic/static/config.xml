@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.djen.mdjen" version="1.2.0" xmlns="http://w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>DJEN</name>
+<widget id="mojotracks.com" version="0.4.0" xmlns="http://w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>MojoTracks</name>
     <description>
-        Metal breakdown generator
+        Music Generator
     </description>
-    <author href="http://rossmcmillan.co.uk" email="rossmcmillan92@gmail.com">
-        Ross McMillan
+    <author href="https://mojotracks.com" email="support@mojotracks.com">
+        MojoTracks
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
@@ -22,8 +22,6 @@
         <icon density="mdpi" src="assets/images/icons/48.png" />
         <icon density="hdpi" src="assets/images/icons/72.png" />
         <icon density="xhdpi" src="assets/images/icons/96.png" />
-        <!-- <icon density="xxhdpi" src="res/icon/android/drawable-xxhdpi-icon.png" /> -->
-        <!-- <icon density="xxxhdpi" src="res/icon/android/drawable-xxxhdpi-icon.png" /> -->
         <splash src="assets/images/screens/200x320.png" density="port-ldpi" />
         <splash src="assets/images/screens/320x200.png" density="land-ldpi" />
         <splash src="assets/images/screens/320x480.png" density="port-mdpi" />

@@ -14,14 +14,14 @@ import { logError } from 'utils/tools'
 const buildAndSaveMidi = compose(
     map(({ title, url }) => saveAsFile('mid', title, url)),
     map(({ id, instruments, bpm }) => ({
-        title: `djen-track-${id}`,
+        title: `mojo-track-${id}`,
         url: buildMidiDataURIFromInstruments(instruments, bpm)
     })),
 )
 
 //    saveAudioPlaylistAsWav :: audioPlaylist -> ()
 const saveAudioPlaylistAsWav = audioPlaylist => renderAudioPlaylistItemToBuffer(audioPlaylist)
-    .fork(logError, saveAsFile('wav', 'djen'))
+    .fork(logError, saveAsFile('wav', 'mojotracks-unique-wav-file'))
 
 const SaveModal = ({ onMIDISave, onWAVSave }) => (
     <div>

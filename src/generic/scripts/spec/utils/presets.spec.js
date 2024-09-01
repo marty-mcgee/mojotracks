@@ -17,7 +17,7 @@ const instrumentsInitialState = [
         {
           id: 'h',
           description: 'Open hihat',
-          path: 'https://raw.githubusercontent.com/RossMcMillan92/djent/master/src/generic/assets/audio/mastered/hihat-open.wav',
+          path: 'https://raw.githubusercontent.com/marty-mcgee/mojotracks/master/src/generic/assets/audio/mastered/hihat-open.wav',
           category: 'Hihat',
           midi: {
             pitch: [
@@ -29,7 +29,7 @@ const instrumentsInitialState = [
         {
           id: 'hc',
           description: 'Closed hihat',
-          path: 'https://raw.githubusercontent.com/RossMcMillan92/djent/master/src/generic/assets/audio/mastered/hihat-closed.wav',
+          path: 'https://raw.githubusercontent.com/marty-mcgee/mojotracks/master/src/generic/assets/audio/mastered/hihat-closed.wav',
           category: 'Hihat',
           midi: {
             pitch: [
@@ -133,7 +133,7 @@ describe('Presets', () => {
                         {
                           id: 'h',
                           description: 'Open hihat',
-                          path: 'https://raw.githubusercontent.com/RossMcMillan92/djent/master/src/generic/assets/audio/mastered/hihat-open.wav',
+                          path: 'https://raw.githubusercontent.com/marty-mcgee/mojotracks/master/src/generic/assets/audio/mastered/hihat-open.wav',
                           category: 'Hihat',
                           midi: {
                             pitch: [
@@ -145,7 +145,7 @@ describe('Presets', () => {
                         {
                           id: 'hc',
                           description: 'Closed hihat',
-                          path: 'https://raw.githubusercontent.com/RossMcMillan92/djent/master/src/generic/assets/audio/mastered/hihat-closed.wav',
+                          path: 'https://raw.githubusercontent.com/marty-mcgee/mojotracks/master/src/generic/assets/audio/mastered/hihat-closed.wav',
                           category: 'Hihat',
                           midi: {
                             pitch: [
@@ -225,7 +225,7 @@ describe('Presets', () => {
                         {
                           id: 'h',
                           description: 'Open hihat',
-                          path: 'https://raw.githubusercontent.com/RossMcMillan92/djent/master/src/generic/assets/audio/mastered/hihat-open.wav',
+                          path: 'https://raw.githubusercontent.com/marty-mcgee/mojotracks/master/src/generic/assets/audio/mastered/hihat-open.wav',
                           category: 'Hihat',
                           midi: {
                             pitch: [
@@ -237,7 +237,7 @@ describe('Presets', () => {
                         {
                           id: 'hc',
                           description: 'Closed hihat',
-                          path: 'https://raw.githubusercontent.com/RossMcMillan92/djent/master/src/generic/assets/audio/mastered/hihat-closed.wav',
+                          path: 'https://raw.githubusercontent.com/marty-mcgee/mojotracks/master/src/generic/assets/audio/mastered/hihat-closed.wav',
                           category: 'Hihat',
                           midi: {
                             pitch: [

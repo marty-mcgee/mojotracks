@@ -15,7 +15,7 @@ const absolutePath = getAbsolutePath()
 const getSoundURL = path =>
   isPhoneGap
     ? `${absolutePath}${path}`
-    : `https://raw.githubusercontent.com/RossMcMillan92/djent/master/src/generic/${path}`
+    : `https://raw.githubusercontent.com/marty-mcgee/mojotracks/master/src/generic/${path}`
 
 const getSound = (id, description, path, category, midi) => ({
   id,

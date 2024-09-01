@@ -40,25 +40,25 @@ const presets = [
     {
         id: 'meshuggah',
         description: 'Meshuggah',
-        group: 'Djent',
+        group: 'Mojo',
         load: load('meshuggah'),
     },
     {
         id: 'thall',
         description: 'Thall I',
-        group: 'Djent',
+        group: 'Mojo',
         load: load('thall'),
     },
     {
         id: 'thall-buster',
         description: 'Thall II',
-        group: 'Djent',
+        group: 'Mojo',
         load: load('thall-buster'),
     },
     {
         id: 'thall-triplets',
         description: 'Thall III',
-        group: 'Djent',
+        group: 'Mojo',
         load: load('thall-triplets'),
     },
 ]
@@ -87,12 +87,12 @@ describe('<PresetModal />', () => {
             presets,
         }
         const wrapper = shallow(<PresetModal {...props} />)
-        const groupDjent = wrapper
-            .find('div[data-group="Djent"]')
+        const groupMojo = wrapper
+            .find('div[data-group="Mojo"]')
         const groupProgressive = wrapper
             .find('div[data-group="Progressive"]')
 
-        expect(groupDjent.exists())
+        expect(groupMojo.exists())
             .toBe(true)
         expect(groupProgressive.exists())
             .toBe(true)
@@ -104,11 +104,11 @@ describe('<PresetModal />', () => {
             presets,
         }
         const wrapper = shallow(<PresetModal {...props} />)
-        const groupDjent = wrapper
-            .find('div[data-group="Djent"]')
-        const thallPreset = groupDjent
+        const groupMojo = wrapper
+            .find('div[data-group="Mojo"]')
+        const thallPreset = groupMojo
             .find('[value="thall"]')
-        const meshuggahPreset = groupDjent
+        const meshuggahPreset = groupMojo
             .find('[value="meshuggah"]')
 
         expect(thallPreset.exists())
@@ -123,9 +123,9 @@ describe('groupPresets function', () => {
         const startingArray = [
             { group: 'Heavy' },
             { group: 'Progressive' },
-            { group: 'Djent' },
+            { group: 'Mojo' },
             { group: 'Heavy' },
-            { group: 'Djent' },
+            { group: 'Mojo' },
         ]
         const expectedResult = [
             [
@@ -136,8 +136,8 @@ describe('groupPresets function', () => {
                 { group: 'Progressive' },
             ],
             [
-                { group: 'Djent' },
-                { group: 'Djent' },
+                { group: 'Mojo' },
+                { group: 'Mojo' },
             ],
         ]
 

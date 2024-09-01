@@ -28,7 +28,7 @@
 	<meta name="theme-color" content="#1e1e1e">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	<meta name="description" content="Music Generator.">
-	<meta name="keywords" content="djeneration, station, generative, react, redux, metal, riff, generator, thall, djent, generate">
+	<meta name="keywords" content="music, generator">
 
 	<!-- Schema.org markup for Google+ -->
 	<meta itemprop="name" content="octogon.io">
@@ -82,53 +82,55 @@
 	<div class="header<% if (htmlWebpackPlugin.options.isPhoneGap) { %> header--nav-spaced <% } %>" ref="header">
 		<div class=""><% /* group-capped-x group-centered */ %>
 			<div class="group-spacing-x">
-                <div class="u-flex-row u-flex-justify">
-                    <a href="/" title="Octogon.io Home"><img class="header__logo" src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/logo.png" alt="octogon.io music generator logo" /></a>
+				<div class="u-flex-row u-flex-justify">
+						<a href="/" title="Octogon.io Home">
+							<img class="header__logo" src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/logo.png" alt="octogon.io music generator logo" />
+						</a>
 					
-					&nbsp;-||-&nbsp;
-					<a class="btn btn-primary" href="/audience" title="Audience">audience</a>
-					&nbsp;-||-&nbsp;
-					<a class="btn btn-primary" href="/speaker" title="Speaker">speaker</a>
-					&nbsp;-||-&nbsp;
-					<a class="btn btn-primary" href="/board" title="Board">board</a>
-					&nbsp;-||-&nbsp;
+						&nbsp;-||-&nbsp;
+						<a class="btn btn-primary" href="/audience" title="Audience">audience</a>
+						&nbsp;-||-&nbsp;
+						<a class="btn btn-primary" href="/speaker" title="Speaker">speaker</a>
+						&nbsp;-||-&nbsp;
+						<a class="btn btn-primary" href="/board" title="Board">board</a>
+						&nbsp;-||-&nbsp;
 
-					<a class="btn btn-primary" href="/welcome" title="Welcome">welcome</a>
-					&nbsp;-||-&nbsp;
-					<a class="btn btn-primary" href="/signup" title="Sign Up">sign up</a>
-					&nbsp;-||-&nbsp;
-					<a class="btn btn-primary" href="/signin" title="Sign In">sign in</a>
-					&nbsp;-||-&nbsp;
-					<a class="btn btn-primary" href="/signout" title="Sign Out">sign out</a>
-					&nbsp;-||-&nbsp;
-					<a class="btn btn-primary" href="/chat" title="Chat">chat</a>
-					&nbsp;-||-&nbsp;
+						<a class="btn btn-primary" href="/welcome" title="Welcome">welcome</a>
+						&nbsp;-||-&nbsp;
+						<a class="btn btn-primary" href="/signup" title="Sign Up">sign up</a>
+						&nbsp;-||-&nbsp;
+						<a class="btn btn-primary" href="/signin" title="Sign In">sign in</a>
+						&nbsp;-||-&nbsp;
+						<a class="btn btn-primary" href="/signout" title="Sign Out">sign out</a>
+						&nbsp;-||-&nbsp;
+						<a class="btn btn-primary" href="/chat" title="Chat">chat</a>
+						&nbsp;-||-&nbsp;
 					
 					<% if ( 1 == 0 && !htmlWebpackPlugin.options.isPhoneGap) { %>
 						<div class="u-flex-row">
-							<a class="u-mr05" href="https://itunes.apple.com/gb/app/djen-metal-breakdown-generator/id1218322408?mt=8" target="_blank" rel="noopener">
+							<a class="u-mr05" href=#icon-appstore" target="_blank" rel="noopener">
 								<img
 									class="header__icon social-icon social-icon--appstore"
 									src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/appstore.svg"
 									width="135"
 									height="39"
-									alt="apple appstore icon"
+									alt="AppStore icon"
 								/>
 							</a>
-							<a class="" href="https://www.facebook.com/djenerationstation/" target="_blank" rel="noopener">
+							<a class="u-mr05" href="#icon-link-header" target="_blank" rel="noopener">
 								<img
 									class="header__icon social-icon"
-									src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/F_icon.svg"
+									src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/notes/whole.svg"
 									width="39"
 									height="39"
-									alt="facebook icon"
+									alt="Whole Note icon"
 								/>
 							</a>
 						</div>
 					<% } %>
 					
-                </div>
-            </div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="root"></div>

@@ -1,10 +1,10 @@
 {
-  "lang": "en",
-  "dir": "ltr",
-  "name": "DJEN",
-  "description": "Metal Generator",
-  "short_name": "DJEN",
-  "icons": [
+    "lang": "en",
+    "dir": "ltr",
+    "name": "MojoTracks",
+    "description": "Music Generator",
+    "short_name": "MojoTracks",
+    "icons": [
         {
             "src": "/assets/images/icon.png",
             "sizes": "1024x1024",
@@ -46,11 +46,11 @@
             "type": "image/png",
             "density": "4.0"
         }
-  ],
-  "scope": "/",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#1e1e1e",
-  "theme_color": "#fff"
+    ],
+    "scope": "/",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#1e1e1e",
+    "theme_color": "#fff"
 }

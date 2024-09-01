@@ -24,7 +24,7 @@ const initialPresets = [
     {
         id: 'thall-buster',
         description: 'Scratchy heavy',
-        group: 'Djent',
+        group: 'Mojo',
         load: promiseToTask(() =>
             import(/* webpackChunkName: "presets.thall-buster" */ 'utils/presets/thall-buster')
         )
@@ -32,7 +32,7 @@ const initialPresets = [
     {
         id: 'thall-chicken',
         description: 'Scratchy groovy',
-        group: 'Djent',
+        group: 'Mojo',
         load: promiseToTask(() =>
             import(/* webpackChunkName: "presets.thall-chicken" */ 'utils/presets/thall-chicken')
         )
@@ -40,7 +40,7 @@ const initialPresets = [
     {
         id: 'thall',
         description: 'Thall',
-        group: 'Djent',
+        group: 'Mojo',
         load: promiseToTask(() =>
             import(/* webpackChunkName: "presets.thall" */ 'utils/presets/thall')
         )
@@ -48,7 +48,7 @@ const initialPresets = [
     {
         id: 'thall-triplets',
         description: 'Thall (triplets)',
-        group: 'Djent',
+        group: 'Mojo',
         load: promiseToTask(() =>
             import(/* webpackChunkName: "presets.thall-triplets" */ 'utils/presets/thall-triplets')
         )

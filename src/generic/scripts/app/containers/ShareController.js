@@ -33,7 +33,7 @@ const getShareableURL = preset =>
         require.ensure(['lzutf8'], (require) => {
             const compress = require('lzutf8').compress
             const compressedPreset = compress(JSON.stringify(preset), { outputEncoding: 'Base64' })
-            const shareableURL = `djen.co/#share=${compressedPreset}`
+            const shareableURL = `mojotracks.com/#share=${compressedPreset}`
             if (shareableURL.length > 2048) logError('URL exceeds 2048 chars. May not succeed')
             res(shareableURL)
         }, 'lzutf8')
