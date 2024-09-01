@@ -5,7 +5,8 @@ import {
     curry,
 } from 'ramda'
 
-const ga = window.ga
+// const ga = window.ga
+const ga = window.dataLayer.gtag
 const eventQueue = []
 
 let isRequestIdleCallbackScheduled
@@ -31,7 +32,7 @@ const processPendingAnalyticsEvents = (deadline) => {
 //    sendGAEvent :: String s : s -> s -> s -> IO gaEvent
 const sendGAEvent = curry((eventCategory, eventAction, eventLabel) =>
     IO(() => {
-        ga('send', {
+        gtag('send', {
             hitType: 'event',
             eventCategory,
             eventAction,
