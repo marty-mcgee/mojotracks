@@ -1,133 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>MojoTracks -||- Music Generator</title>
 
-<head>
-	<meta charset="UTF-8">
-	<title>MojoTracks -||- Music Generator</title>
-
-	<% if (htmlWebpackPlugin.options.isProduction) { %>
-	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/sw.js')
-				.then(function (d) { console.log('sw.js registered') })
-				.catch(function (e) { console.log(e, 'sw.js NOT registered') });
-		}
-	</script>
-	<% } %>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-	<script>
-		WebFont.load({
-			google: {
-				families: ['Open Sans:900,400,300']
+		<% if (htmlWebpackPlugin.options.isProduction) { %>
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/sw.js')
+					.then(function (d) { console.log('sw.js registered') })
+					.catch(function (e) { console.log(e, 'sw.js NOT registered') });
 			}
-		});
-	</script>
+		</script>
+		<% } %>
 
-	<link rel="manifest" href="<%= htmlWebpackPlugin.options.absolutePath %>manifest.json" async>
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: {
+					families: ['Open Sans:900,400,300']
+				}
+			});
+		</script>
 
-	<meta name="theme-color" content="#222222">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-	<meta name="description" content="Rock and Metal Track Generator built with React + Web Audio API">
-	<meta name="keywords"
-		content="react, redux, web audio, music, generator">
+		<link rel="manifest" href="<%= htmlWebpackPlugin.options.absolutePath %>manifest.json" async>
 
-	<!-- Schema.org markup for Google+ -->
-	<meta itemprop="name" content="MojoTracks">
-	<meta itemprop="description" content="Rock and Metal Track Generator built with React + Web Audio API">
-	<meta itemprop="image" content="https://mojotracks.com/assets/images/icon.png">
+		<meta name="theme-color" content="#222222">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<meta name="description" content="Rock and Metal Track Generator built with React + Web Audio API">
+		<meta name="keywords" content="react, redux, web audio, music, generator">
 
-	<!-- Twitter Card data -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="MojoTracks -||- Music Generator">
-	<meta name="twitter:description" content="Rock and Metal Track Generator built with React + Web Audio API">
-	<meta name="twitter:creator" content="@martymcgee">
-	<meta name="twitter:image" content="https://mojotracks.com/assets/images/icon.png">
+		<!-- Schema.org markup for Google+ -->
+		<meta itemprop="name" content="MojoTracks">
+		<meta itemprop="description" content="Rock and Metal Track Generator built with React + Web Audio API">
+		<meta itemprop="image" content="https://mojotracks.com/assets/images/icon.png">
 
-	<!-- Open Graph data -->
-	<meta property="og:title" content="MojoTracks -||- Music Generator">
-	<meta property="og:type" content="website">
-	<meta property="og:description" content="Rock and Metal Track Generator built with React + Web Audio API">
-	<meta property="og:url" content="https://mojotracks.com/">
-	<meta property="og:image" content="https://mojotracks.com/assets/images/icon.png">
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="MojoTracks -||- Music Generator">
+		<meta name="twitter:description" content="Rock and Metal Track Generator built with React + Web Audio API">
+		<meta name="twitter:creator" content="@martymcgee">
+		<meta name="twitter:image" content="https://mojotracks.com/assets/images/icon.png">
 
-	<!-- Apple data -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#1e1e1e">
-	<meta name="apple-mobile-web-app-title" content="MojoTracks">
-	<meta name="format-detection" content="telephone=no">
+		<!-- Open Graph data -->
+		<meta property="og:title" content="MojoTracks -||- Music Generator">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="Rock and Metal Track Generator built with React + Web Audio API">
+		<meta property="og:url" content="https://mojotracks.com/">
+		<meta property="og:image" content="https://mojotracks.com/assets/images/icon.png">
 
-	<link rel="apple-touch-icon" sizes="57x57"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/57.png">
-	<link rel="apple-touch-icon" sizes="60x60"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/60.png">
-	<link rel="apple-touch-icon" sizes="72x72"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/72.png">
-	<link rel="apple-touch-icon" sizes="76x76"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/76.png">
-	<link rel="apple-touch-icon" sizes="114x114"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/114.png">
-	<link rel="apple-touch-icon" sizes="120x120"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/120.png">
-	<link rel="apple-touch-icon" sizes="144x144"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/144.png">
-	<link rel="apple-touch-icon" sizes="152x152"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/152.png">
-	<link rel="apple-touch-icon" sizes="180x180"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/180.png">
-	<link rel="icon" type="image/png" sizes="192x192"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/192.png">
-	<link rel="icon" type="image/png" sizes="96x96"
-		href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/96.png">
-	<meta name="msapplication-TileColor" content="#1e1e1e">
-	<meta name="msapplication-TileImage"
-		content="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/144.png">
+		<!-- Apple data -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#1e1e1e">
+		<meta name="apple-mobile-web-app-title" content="MojoTracks">
+		<meta name="format-detection" content="telephone=no">
 
-	<meta http-equiv="Content-Security-Policy" content="default-src * blob:;
-	                  style-src * 'self' 'unsafe-inline' 'unsafe-eval';
-	                  script-src * 'self' 'unsafe-inline' 'unsafe-eval' data:;
-	                  worker-src * blob: 'self' 'unsafe-inline' 'unsafe-eval';">
-	<noscript>
-		<style>
-			.js {
-				display: none !important
-			}
-		</style>
-	</noscript>
-</head>
+		<link rel="apple-touch-icon" sizes="57x57"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/57.png">
+		<link rel="apple-touch-icon" sizes="60x60"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/60.png">
+		<link rel="apple-touch-icon" sizes="72x72"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/72.png">
+		<link rel="apple-touch-icon" sizes="76x76"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/76.png">
+		<link rel="apple-touch-icon" sizes="114x114"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/114.png">
+		<link rel="apple-touch-icon" sizes="120x120"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/120.png">
+		<link rel="apple-touch-icon" sizes="144x144"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/144.png">
+		<link rel="apple-touch-icon" sizes="152x152"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/152.png">
+		<link rel="apple-touch-icon" sizes="180x180"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/180.png">
+		<link rel="icon" type="image/png" sizes="192x192"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/192.png">
+		<link rel="icon" type="image/png" sizes="96x96"
+			href="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/96.png">
 
-<body class="preload">
-	<div class="header<% if (htmlWebpackPlugin.options.isPhoneGap) { %> header--nav-spaced <% } %>" ref="header">
-		<div class="group-capped-x group-centered">
-			<div class="group-spacing-x">
-				<div class="u-flex-row u-flex-justify">
-					<img class="header__logo" src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/logo.png"
-						alt="MojoTracks logo" />
-					<% if (!htmlWebpackPlugin.options.isPhoneGap) { %>
-					<div class="u-flex-row">
-						<!--  -->
+		<!-- Microsoft data -->
+		<meta name="msapplication-TileColor" content="#1e1e1e">
+		<meta name="msapplication-TileImage"
+			content="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/icons/144.png">
+
+		<!-- CORS -->
+		<meta http-equiv="Content-Security-Policy" content="default-src * blob:;
+											style-src * 'self' 'unsafe-inline' 'unsafe-eval';
+											script-src * 'self' 'unsafe-inline' 'unsafe-eval' data:;
+											worker-src * blob: 'self' 'unsafe-inline' 'unsafe-eval';">
+
+	</head>
+
+	<body class="preload">
+		<div class="header<% if (htmlWebpackPlugin.options.isPhoneGap) { %> header--nav-spaced <% } %>" ref="header">
+			<div class="group-capped-x group-centered">
+				<div class="group-spacing-x">
+					<div class="u-flex-row u-flex-justify">
+						<img class="header__logo" src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/logo.png"
+							alt="MojoTracks logo" />
+						<% if (!htmlWebpackPlugin.options.isPhoneGap) { %>
+						<div class="u-flex-row">
+							<!--  -->
+						</div>
+						<% } %>
 					</div>
-					<% } %>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="root"></div>
+		
+		<div id="root"></div>
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JH9T0FYDN2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-	<!-- <noscript>
-		<p class="u-mt2 u-tac">JavaScript is required to run this app.</p>
-	</noscript> -->
-	<!-- <script>
-		(function (i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date(); a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-		ga('create', 'UA-XXXXXXXX-2', 'auto');
-		ga('send', 'pageview');
-	</script> -->
-</body>
+			gtag('config', 'G-JH9T0FYDN2');
+		</script>
 
+	</body>
 </html>
