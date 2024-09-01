@@ -95,19 +95,37 @@
 		<div class="header<% if (htmlWebpackPlugin.options.isPhoneGap) { %> header--nav-spaced <% } %>" ref="header">
 			<div class="group-capped-x group-centered">
 				<div class="group-spacing-x">
-					<div class="u-flex-row u-flex-justify">
-						<img class="header__logo" src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/logo.png"
-							alt="MojoTracks logo" />
+					<div class="u-flex-row u-flex-start">
+
+						<img 
+							class="header__logo" 
+							src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/logo.png"
+							alt="MojoTracks logo"
+							width="64"
+							height="64"
+						/> &nbsp; MojoTracks
+
 						<% if (!htmlWebpackPlugin.options.isPhoneGap) { %>
 						<div class="u-flex-row">
 							<!--  -->
+							<a class="" href="https://github.com/marty-mcgee/mojotracks" target="_blank" rel="noopener">
+								<img
+									class="header__icon social-icon"
+									src="<%= htmlWebpackPlugin.options.absolutePath %>assets/images/notes/quarter.svg"
+									alt="source code icon"
+									width="32"
+									height="32"
+								/>
+							</a>
 						</div>
 						<% } %>
+
 					</div>
 				</div>
 			</div>
 		</div>
 		
+		<!-- React App root -->
 		<div id="root"></div>
 		
 		<!-- Google tag (gtag.js) -->
